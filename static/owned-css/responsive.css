@@ -1,0 +1,17 @@
+
+@media only screen and (max-width: 600px) {
+    .hero .heading{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 24%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 29px;
+        font-weight: bold;
+        color: #555e68;
+        background: aliceblue;
+        padding: 1% 2%;
+    }
+  }

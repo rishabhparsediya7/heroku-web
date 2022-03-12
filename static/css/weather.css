@@ -1,0 +1,117 @@
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 1rem 0rem;
+    font-size: 1.9rem;
+}
+
+.image img {
+    margin: 1rem 0rem;
+    width: 100%;
+    max-height: 50%;
+}
+
+.precipitation,
+.wind,
+.humid,
+.pressure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.condition {
+    margin: 10px 40px;
+    padding: 30px;
+    background: #80808033;
+    box-shadow: 0 0px 1px 0 grey;
+    backdrop-filter: blur( 3px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px 40px;
+    grid-template-areas: ". ." ". .";
+}
+
+.form-group .search {
+    background: #80808033;
+    border: none;
+    padding: 0px 20px;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.form-group .search:focus {
+    background: #80808033;
+    border: none;
+    padding: 0px 20px;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.searchwithbutton .btn-location {
+    background: #80808033;
+    color: grey;
+    font-size: 11px;
+    width: 44%;
+    border-radius: 20px;
+}
+
+.form-group .fa-search {
+    background: transparent;
+    border: none;
+    color: grey;
+    position: absolute;
+    right: 130px;
+    top: 32px;
+}
+
+.weather-section {
+    padding: 50px 40px;
+}
+
+.box1 {
+    background: #80808033;
+    box-shadow: 0 0px 1px 0 grey;
+    backdrop-filter: blur( 3px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    color: white;
+    font-size: 0.9rem;
+    padding: 1rem;
+    height: auto;
+}
+
+.searchwithbutton {
+    display: flex;
+}
+
+.search-bar {
+    margin: 2rem 2rem;
+}
+
+.flexmode {
+    display: flex;
+    width: 100%;
+    margin: 0rem 0.5rem;
+}
+
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

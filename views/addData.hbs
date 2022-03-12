@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <form id="add-posts">
+        <div class="form-group">
+            <label for="heading">Heading of session</label>
+            <input type="text" class="form-control" id="heading-session" name="heading" placeholder="Topic of session">
+        </div>
+        <div class="form-group">
+            <label for="image-link">Link for image:</label>
+            <input type="text" class="form-control" id="linkforimage" name="imageUrl" aria-describedby="link"
+                placeholder="Type or paste link">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-SERVICE.js"></script>
+    <script>
+        //https://fir-fd709-default-rtdb.firebaseio.com/
+        const firebaseConfig = {
+            apiKey: "AIzaSyCvwdDwPabanRLFa-97nNR7SiHoOLGgNsM",
+            authDomain: "fir-fd709.firebaseapp.com",
+            databaseURL: "https://fir-fd709-default-rtdb.firebaseio.com",
+            projectId: "fir-fd709",
+            storageBucket: "fir-fd709.appspot.com",
+            messagingSenderId: "361647051035",
+            appId: "1:361647051035:web:6c279bdea030fe9ec9c3be"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let firestore = firebase.firestore();
+        
+        firebase.firestore().enablePersistence()
+            .then(function () {
+                // Initialize Cloud Firestore through firebase
+                var db = firebase.firestore();
+            })
+            .catch(function (err) {
+                if (err.code == 'failed-precondition') {
+                    // Multiple tabs open, persistence can only be enabled in one tab at a a time.
+
+                } else if (err.code == 'unimplemented') {
+                    // The current browser does not support all of the
+                    // features required to enable persistence
+                    // ...
+                }
+            });
+    </script>
+
+</body>
+
+</html>
